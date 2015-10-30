@@ -1,0 +1,25 @@
+{
+  "name": "string-class",
+  "version": "1.0.0",
+  "description": "Extensions to JavaScript's String class",
+  "main": "src/string.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevgathuku/string-class.git"
+  },
+  "keywords": [
+    "string"
+  ],
+  "author": "Kevin Ndung'u",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevgathuku/string-class/issues"
+  },
+  "homepage": "https://github.com/kevgathuku/string-class#readme",
+  "dependencies": {
+    "jasmine": "^2.3.2"
+  }
+}
