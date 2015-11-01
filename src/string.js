@@ -47,4 +47,11 @@
     return /\?$/.test(this);
   };
 
+  String.prototype.words = function() {
+    // Remove all punctuation first, except apostrophes
+    // Apostrophes are considered to be part of the word
+    // Then return the string split based on whitespace
+    return this.replace(/[.,-\/#!$%?!\^&\*;:{}=\-_`~()]/g, '').split(/\s/);
+  };
+
 })();
