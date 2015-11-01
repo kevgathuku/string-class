@@ -36,4 +36,10 @@
     return _lower;
   };
 
+  String.prototype.ucFirst = function() {
+    // Return a new string formed by replacing the
+    // first element of the string with its uppercase version
+    return this.replace(/^[a-z]/, this[0].toUpper());
+  };
+
 })();
