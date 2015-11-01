@@ -211,7 +211,9 @@ describe('String Class Extension Tests:', function() {
       expect(typeof '11111.11'.toCurrency()).toBe('string');
     });
 
-    it('should return formated currency, taking care of cents', function() {
+    it('should return formatted currency, taking care of cents', function() {
+      expect('1000'.toCurrency()).toBe('1,000');
+      expect('1000000'.toCurrency()).toBe('1,000,000');
       expect('111.11'.toCurrency()).toBe('111.11');
       expect('1111.11'.toCurrency()).toBe('1,111.11');
       expect('11111.11'.toCurrency()).toBe('11,111.11');
