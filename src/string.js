@@ -54,4 +54,10 @@
     return this.replace(/[.,-\/#!$%?!\^&\*;:{}=\-_`~()]/g, '').split(/\s/);
   };
 
+  String.prototype.wordCount = function() {
+    // Return the length of the array returned
+    // When .words() is called
+    return this.words().length;
+  };
+
 })();
