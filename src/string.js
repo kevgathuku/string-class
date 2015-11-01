@@ -42,4 +42,9 @@
     return this.replace(/^[a-z]/, this[0].toUpper());
   };
 
+  String.prototype.isQuestion = function() {
+    // Return true if the string ends in a question mark
+    return /\?$/.test(this);
+  };
+
 })();

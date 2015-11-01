@@ -132,7 +132,7 @@ describe('String Class Extension Tests:', function() {
     });
 
     it('should return a Boolean value', function() {
-      expect(typeof 'sample'.isQuestion()).toBe('function');
+      expect(typeof 'sample'.isQuestion()).toBe('boolean');
     });
 
     it('should return true if the string is a question', function() {
