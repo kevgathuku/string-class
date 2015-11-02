@@ -60,4 +60,9 @@
     return this.words().length;
   };
 
+  String.prototype.fromCurrency = function() {
+    // Remove all commas in the string
+    return parseFloat(this.replace(/\,/g, ''));
+  };
+
 })();

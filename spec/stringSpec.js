@@ -237,6 +237,7 @@ describe('String Class Extension Tests:', function() {
     });
 
     it('should return 11111.11 for 11,111.11', function() {
+      expect('10000'.fromCurrency()).toBe(10000);
       expect('11'.fromCurrency()).toBe(11);
       expect('11.11'.fromCurrency()).toBe(11.11);
       expect('1,111.11'.fromCurrency()).toBe(1111.11);
