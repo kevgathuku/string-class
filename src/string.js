@@ -60,6 +60,14 @@
     return this.words().length;
   };
 
+  String.prototype.toCurrency = function() {
+    // First, match a digit followed by 1 or more groups of 3 digits
+    // Only capture a digit that is followed by another digit
+    // This excludes a digit that is already followed by a comma
+    // Add a comma after the matched digit
+    return this.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  };
+
   String.prototype.fromCurrency = function() {
     // Remove all commas in the string
     return parseFloat(this.replace(/\,/g, ''));
