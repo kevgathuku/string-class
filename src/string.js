@@ -48,6 +48,7 @@
   };
 
   String.prototype.words = function() {
+    if (this.length === 0) return [];
     // Remove all punctuation first, except apostrophes
     // Apostrophes are considered to be part of the word
     // Then return the string split based on whitespace

@@ -157,6 +157,10 @@ describe('String Class Extension Tests:', function() {
       expect(toString.call('test string'.words())).toBe('[object Array]');
     });
 
+    it('should return [] for an empty string', function() {
+      expect(''.words()).toEqual([]);
+    });
+
     it('Should returns an Array of the words in the string', function() {
       expect('Are you a scouser?'.words())
         .toEqual(['Are', 'you', 'a', 'scouser']);
@@ -182,6 +186,10 @@ describe('String Class Extension Tests:', function() {
 
     it('should be a function', function() {
       expect(typeof String.prototype.wordCount).toBe('function');
+    });
+
+    it('should return 0 for an empty string', function() {
+      expect(''.wordCount()).toBe(0);
     });
 
     it('should return 8 for the test sentence', function() {
