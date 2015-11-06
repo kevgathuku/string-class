@@ -3,7 +3,7 @@
 
   // Returns true if the string contains vowels
   String.prototype.hasVowels = function() {
-    return /[aeiouAEIOU]/.test(this);
+    return /[aeiou]/i.test(this);
   };
 
   String.prototype.toUpper = function() {
@@ -66,7 +66,7 @@
     // Only capture a digit if the groups of 3 do not have a digit after them
     // i.e. up to the end of the string
     // Add a comma after the matched digit
-    return this.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+    return parseFloat(this).toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   };
 
   String.prototype.fromCurrency = function() {

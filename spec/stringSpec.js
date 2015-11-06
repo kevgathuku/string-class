@@ -220,13 +220,13 @@ describe('String Class Extension Tests:', function() {
     });
 
     it('should return formatted currency, taking care of cents', function() {
-      expect('1000'.toCurrency()).toBe('1,000');
-      expect('1000000'.toCurrency()).toBe('1,000,000');
+      expect('1000'.toCurrency()).toBe('1,000.00');
+      expect('1000000'.toCurrency()).toBe('1,000,000.00');
       expect('111.11'.toCurrency()).toBe('111.11');
       expect('1111.11'.toCurrency()).toBe('1,111.11');
       expect('11111.11'.toCurrency()).toBe('11,111.11');
       expect('111111.11'.toCurrency()).toBe('111,111.11');
-      expect('111111111.11'.toCurrency()).toBe('111,111,111.11');
+      expect('111111111.1111'.toCurrency()).toBe('111,111,111.11');
       expect('5689896.89'.toCurrency()).toBe('5,689,896.89');
     });
   });
