@@ -62,9 +62,9 @@
   };
 
   String.prototype.toCurrency = function() {
-    // First, match a digit followed by 1 or more groups of 3 digits
-    // Only capture a digit that is followed by another digit
-    // This excludes a digit that is already followed by a comma
+    // Match a digit followed by 1 or more groups of 3 digits
+    // Only capture a digit if the groups of 3 do not have a digit after them
+    // i.e. up to the end of the string
     // Add a comma after the matched digit
     return this.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   };
