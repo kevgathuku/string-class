@@ -4,7 +4,7 @@
   "description": "Extensions to JavaScript's String class",
   "main": "src/string.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "node_modules/.bin/jasmine"
   },
   "repository": {
     "type": "git",
