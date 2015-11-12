@@ -39,7 +39,10 @@
   String.prototype.ucFirst = function() {
     // Return a new string formed by replacing the
     // first element of the string with its uppercase version
-    return this.replace(/^[a-z]/, this[0].toUpper());
+    return this.replace(/^[a-z]/, function(match) {
+      // match is the matched character
+      return match.toUpper();
+    });
   };
 
   String.prototype.isQuestion = function() {
